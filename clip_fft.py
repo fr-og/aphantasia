@@ -70,7 +70,7 @@ def get_args():
     parser.add_argument('-e',  '--enforce', default=0, type=float, help='Enforce details (by boosting similarity between two parallel samples)')
     parser.add_argument('-x',  '--expand',  default=0, type=float, help='Boosts diversity (by enforcing difference between prev/next samples)')
     parser.add_argument('-n',  '--noise',   default=0, type=float, help='Add noise to suppress accumulation') # < 0.05 ?
-    parser.add_argument('-nt', '--notext',  default=0.3, type=float, help='Subtract typed text as image (avoiding graffiti?), [0..1]')
+    parser.add_argument('-nt', '--notext',  default=1.0, type=float, help='Subtract typed text as image (avoiding graffiti?), [0..1]')
     parser.add_argument('-c',  '--sync',    default=0, type=float, help='Sync output to input image')
     parser.add_argument(       '--invert',  action='store_true', help='Invert criteria')
     parser.add_argument(       '--sim',     default='mix', help='Similarity function (dot/angular/spherical/mixed; None = cossim)')
